@@ -1,0 +1,10 @@
+dn: cn=config
+changetype: modify
+replace: olcTLSCACertificateFile
+olcTLSCACertificateFile: /etc/pki/CA/certs/ca.pem
+-
+replace: olcTLSCertificateFile
+olcTLSCertificateFile: /etc/openldap/certs/ldap01.mysite.example.com.cert.pem
+-
+replace: olcTLSCertificateKeyFile
+olcTLSCertificateKeyFile: /etc/openldap/certs/ldap01.mysite.example.com.pem

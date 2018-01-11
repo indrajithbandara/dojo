@@ -1,0 +1,39 @@
+These files are examples for /etc/krb5.conf.
+
+krb5.conf.ubuntu14_04.org:
+    Original for krb5.conf.
+
+krb5.conf.modified
+    Customized krb5.conf.
+    Default Kerberos version 5 realm:
+        -> MYSITE.LOCAL
+    Kerberos servers for your realm:
+        -> ldap
+    Administrative server for your Kerberos realm:
+        -> ldap
+
+----------------------------------------------------------------
+
+root@ldap:~/BuildingLDAP# diff -u example/krb/krb5.conf.ubuntu14_04.org example/krb/krb5.conf.modified 
+--- example/krb/krb5.conf.ubuntu14_04.org       2015-10-17 02:00:59.738164763 +0900
++++ example/krb/krb5.conf.modified      2015-10-17 02:00:59.738164763 +0900
+@@ -1,5 +1,5 @@
+ [libdefaults]
+-       default_realm = ATHENA.MIT.EDU
++       default_realm = MYSYTE.LOCAL
+ 
+ # The following krb5.conf variables are only for MIT Kerberos.
+        krb4_config = /etc/krb.conf
+@@ -37,6 +37,10 @@
+        fcc-mit-ticketflags = true
+ 
+ [realms]
++       MYSYTE.LOCAL = {
++               kdc = ldap
++               admin_server = ldap
++       }
+        ATHENA.MIT.EDU = {
+                kdc = kerberos.mit.edu:88
+                kdc = kerberos-1.mit.edu:88
+
+

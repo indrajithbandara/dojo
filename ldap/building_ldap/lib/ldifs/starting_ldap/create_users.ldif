@@ -1,0 +1,68 @@
+# Taro Suzuki. password: "pw-taro-suzuki"
+dn: uid=taro-suzuki,ou=Users,dc=mysite,dc=example,dc=com
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: shadowAccount
+objectClass: organizationalPerson
+sn: suzuki
+displayName: taro
+cn: taro-suzuki
+uid: taro-suzuki
+uidNumber: 1100
+gidNumber: 1100
+homeDirectory: /home/taro-suzuki
+loginShell: /bin/bash
+userPassword: {SSHA}lj0/9xmayoiUzJMbWrJOEX9uh0ODcjz6
+mail: taro-suzuki@mysite.example.com
+
+# Jiro Suzuki. password: "pw-jiro-suzuki"
+dn: uid=jiro-suzuki,ou=Users,dc=mysite,dc=example,dc=com
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: shadowAccount
+objectClass: organizationalPerson
+sn: suzuki
+displayName: jiro
+cn: jiro-suzuki
+uid: jiro-suzuki
+uidNumber: 1101
+gidNumber: 1101
+homeDirectory: /home/jiro-suzuki
+loginShell: /bin/bash
+userPassword: {SSHA}fF8vtfGiXpa0M+5SV9y3uNaEgdz1BqfA
+mail: jiro-suzuki@mysite.example.com
+
+# Sasburo Suzuki. password: "pw-saburo-suzuki"
+dn: uid=saburo-suzuki,ou=Users,dc=mysite,dc=example,dc=com
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: shadowAccount
+objectClass: organizationalPerson
+sn: suzuki
+displayName: saburo
+cn: saburo-suzuki
+uid: saburo-suzuki
+uidNumber: 1102
+gidNumber: 1101
+homeDirectory: /home/saburo-suzuki
+loginShell: /bin/bash
+userPassword: {SSHA}nhgnBfnNYaTccxhOFzrWYMxu3T6DtdDL
+mail: saburo-suzuki@mysite.example.com
+
+# Hanako Suzuki. password: "pw-hanako-suzuki"
+dn: uid=hanako-suzuki,ou=Users,dc=mysite,dc=example,dc=com
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: shadowAccount
+objectClass: organizationalPerson
+sn: suzuki
+displayName: hanako
+cn: hanako-suzuki
+uid: hanako-suzuki
+uidNumber: 1103
+gidNumber: 1102
+homeDirectory: /home/hanako-suzuki
+loginShell: /bin/bash
+userPassword: {SSHA}GCSVqdZ1vr2uhoEfttuFrVo6PsOHhukF
+mail: hanako-suzuki@mysite.example.com
+
