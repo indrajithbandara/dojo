@@ -1,0 +1,28 @@
+//
+// Do any local configuration here
+//
+
+zone "example.com" IN {
+	type master;
+	file "/etc/bind/example.com";
+	allow-update {
+		172.17.0.0/16;
+		10.5.0.0/24;
+		192.168.1.0/24;
+	};
+};
+//逆引き情報
+zone "0.5.10.in-addr.arpa" IN {
+	type master;
+	file "/etc/bind/0.5.10.in-addr.arpa";
+	allow-update {
+		172.17.0.0/16;
+		10.5.0.0/24;
+		192.168.1.0/24;
+	};
+};
+
+// Consider adding the 1918 zones here, if they are not used in your
+// organization
+include "/etc/bind/zones.rfc1918";
+

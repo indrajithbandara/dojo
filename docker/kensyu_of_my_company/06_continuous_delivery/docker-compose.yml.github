@@ -1,0 +1,49 @@
+version: '3'
+
+services:
+  drone-server:
+    image: drone/drone:0.7
+    container_name: drone-server
+    network_mode: bridge
+    volumes:
+      - ./drone:/var/lib/drone/
+#    restart: always
+    environment:
+      - DRONE_OPEN=true
+      - DRONE_HOST=http://drone.example.com
+      - DRONE_GITHUB=true
+      - DRONE_GITHUB_URL=https://github.com
+      - DRONE_GITHUB_CLIENT=${DRONE_GITHUB_CLIENT}
+      - DRONE_GITHUB_SECRET=${DRONE_GITHUB_SECRET}
+      - DRONE_SECRET=${DRONE_SECRET}
+
+  drone-agent:
+    image: drone/drone:0.7
+    container_name: drone-agent
+    network_mode: bridge
+    command: agent
+#    restart: always
+    depends_on:
+      - drone-server
+    links:
+      - drone-server
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      - DRONE_SERVER=ws://drone-server:8000/ws/broker
+      - DRONE_SECRET=${DRONE_SECRET}
+
+  nginx:
+    image: nginx:latest
+    container_name: nginx
+    network_mode: bridge
+#    restart: always
+    ports:
+      - 80:80
+      - 443:443
+    links:
+      - drone-server
+      - drone-agent
+    volumes:
+      - ./nginx/conf.d/drone.example.com.conf:/etc/nginx/conf.d/drone.example.com.conf
+

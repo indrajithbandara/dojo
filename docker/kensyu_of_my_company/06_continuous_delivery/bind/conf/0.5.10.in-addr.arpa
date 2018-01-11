@@ -1,0 +1,20 @@
+$ORIGIN 0.5.10.in-addr.arpa.
+$TTL 86400
+@	IN	SOA	dns.local.	(
+								20170705		; serial number
+								1D				; refresh after 1 day
+								1H				; retry after 1 hour
+								1W				; expire after 1 week
+								3H				; minimum TTL of 3 hour
+		)
+		IN	NS	dns.local.
+		;;スレーブのDNSサーバなどがあれば記述します。
+		;; IN	NS	dns2.local.
+
+;;↓逆引き情報の一覧設定
+11	IN	PTR	drone-server.local.
+12	IN	PTR	drone-agent.local.
+13	IN	PTR	gitlab.local.
+14	IN	PTR	nginx.local.
+254	IN	PTR	dns.local.
+
