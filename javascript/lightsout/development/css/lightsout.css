@@ -1,0 +1,18 @@
+.light {
+  width:  48px;
+  height: 48px;
+  margin: 1px 1px 1px 1px;
+}
+
+.heartLeftDefault {
+  font-size: 220%;
+}
+
+.heartLeftRed {
+  font-size: 200%;
+}
+
+.stringStopWatch {
+  font-size: 225%;
+}
+

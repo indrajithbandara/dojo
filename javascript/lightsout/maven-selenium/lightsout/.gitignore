@@ -1,0 +1,51 @@
+# Thanks for good journals...
+# http://qiita.com/tora470/items/d61c3fcb261e48edc996
+# https://github.com/github/gitignore/blob/master/Maven.gitignore
+
+# Java
+*.class
+*.jar
+*.war
+*.ear
+
+# Eclipse
+.project
+.classpath
+.settings
+
+# Idea
+.idea
+*.iml
+*.iws
+*.ipr
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Gradle
+.gradle
+!gradle-wrapper.jar
+
+# Maven
+target
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+
+# Build
+out
+build
+bin
+
+# Other
+*.log
+*.swp
+*.swo
+*.bak
+

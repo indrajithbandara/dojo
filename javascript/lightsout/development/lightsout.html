@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="css/icomoon.css" />
+<link rel="stylesheet" href="css/bootstrap.css" />
+<link rel="stylesheet" href="css/lightsout.css" />
+<link rel="stylesheet" href="css/animate.min.css" />
+<title>Lights out</title>
+</head>
+<body>
+<div id="tublarWindow" ></div>
+<div style="text-align: center;">
+  <table style="border: 0px; margin: auto;">
+    <tbody>
+    <tr class="animated fadeIn">
+      <td colspan="1">
+        <span id="heartLeft" class="heartLeftDefault glyphicon glyphicon-heart" aria-hidden="true"></span>
+      </td>
+      <td colspan="4" style="text-align: center;">
+        <span id="time" class="stringStopWatch">00:00:00:000</span>
+      </td>
+    </tr>
+    <tr class="animated fadeInRight">
+      <td><button class="light btn btn-default"></button></td>
+      <td><button class="light btn btn-default"></button></td>
+      <td><button class="light btn btn-success"></button></td>
+      <td><button class="light btn btn-default"></button></td>
+      <td><button class="light btn btn-default"></button></td>
+    </tr>
+    <tr class="animated fadeInLeft">
+      <td><button class="light btn btn-default"></button></td>
+      <td><button class="light btn btn-default"></button></td>
+      <td><button class="light btn btn-success"></button></td>
+      <td><button class="light btn btn-default"></button></td>
+      <td><button class="light btn btn-default"></button></td>
+    </tr>
+    <tr class="animated fadeInRight">
+      <td><button class="light btn btn-success"></button></td>
+      <td><button class="light btn btn-success"></button></td>
+      <td><button class="light btn btn-default"></button></td>
+      <td><button class="light btn btn-success"></button></td>
+      <td><button class="light btn btn-success"></button></td>
+    </tr>
+    <tr class="animated fadeInLeft">
+      <td><button class="light btn btn-default"></button></td>
+      <td><button class="light btn btn-default"></button></td>
+      <td><button class="light btn btn-success"></button></td>
+      <td><button class="light btn btn-default"></button></td>
+      <td><button class="light btn btn-default"></button></td>
+    </tr>
+    <tr class="animated fadeInRight">
+      <td><button class="light btn btn-default"></button></td>
+      <td><button class="light btn btn-default"></button></td>
+      <td><button class="light btn btn-success"></button></td>
+      <td><button class="light btn btn-default"></button></td>
+      <td><button class="light btn btn-default"></button></td>
+    </tr>
+    <tr class="animated fadeIn">
+      <td colspan="5" style="padding-top: 4px;">
+
+        <!-- ボタングループ -->
+        <div class="btn-group" style="width: 100%;" role="group">
+           <button style="width: 41%;" class="btn btn-default" type="button" id="toggleButton">
+            <span id="glyphPlayAndPause" class="glyphicon glyphicon-play" aria-hidden="true"></span>
+            <span id="stringButtonPlayAndPause">Start</span>
+          </button>
+          <button style="width: 41%;" class="btn btn-default" type="button" id="shuffleButton">
+            <span id="glyphShuffle" class="glyphicon glyphicon-random " aria-hidden="true"></span>
+            Shuffle
+          </button>
+          <button style="width: 18%;" class="btn btn-default" type="button" id="rankingButton">
+            <span id="glyphKing" class="glyphicon glyphicon-king" aria-hidden="true"></span>
+          </button>
+
+        </div>
+
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Modal -->
+<div id="clearModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div id="modalHeader" class="modal-header">
+      </div>
+      <div id="modalBody" class="modal-body">
+    </div>
+  </div>
+</div>
+
+<!-- Trigger the modal with a button -->
+<button id="showClearModal" type="button" style="display: none;" data-toggle="modal" data-target="#clearModal"></button>
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/stopwatch.js"></script>
+<script src="js/tubular.js"></script>
+<script src="js/ranking.js"></script>
+<script src="js/simultaneous_equation.js"></script>
+<script src="js/lightsout.js"></script>
+</body>
+</html>

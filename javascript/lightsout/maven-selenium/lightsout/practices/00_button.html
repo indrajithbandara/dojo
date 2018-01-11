@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>button をクリックする練習</title>
+<script language="javascript">
+function showClickedText() {
+  var clickedText = document.getElementById('clicked_text');
+  clickedText.hidden = false;
+}
+</script>
+
+</head>
+<body>
+  <form>
+    <button type="button" id="click_button" onclick="document.getElementById('result').innerHTML = 'OK';">OK</button>
+    <span id="result"></span>
+  </form>
+</body>
+</html>
