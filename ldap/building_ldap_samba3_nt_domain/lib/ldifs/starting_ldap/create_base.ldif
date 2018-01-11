@@ -1,0 +1,7 @@
+# Organization
+dn: %%DOMAIN_COMPONENT%%
+objectClass: dcObject
+objectClass: organization
+dc: %%DOMAIN%%
+o: %%ORGANIZATION%%
+

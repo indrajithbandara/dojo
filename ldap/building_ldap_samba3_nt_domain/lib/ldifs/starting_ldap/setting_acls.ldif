@@ -1,0 +1,14 @@
+dn: olcDatabase={2}mdb,cn=config
+changetype: modify
+add: olcAccess
+olcAccess: to attrs=userPassword
+    by self write
+    by anonymous auth
+    by dn="cn=Manager,dc=mysite,dc=example,dc=com" write
+    by * none
+
+olcAccess: to *
+    by self read
+    by dn="cn=Manager,dc=mysite,dc=example,dc=com" write
+    by * read
+

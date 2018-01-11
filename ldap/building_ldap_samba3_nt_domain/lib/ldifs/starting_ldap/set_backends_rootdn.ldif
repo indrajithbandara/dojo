@@ -1,0 +1,33 @@
+# example)
+## dn: olcDatabase={1}mdb,cn=config
+## changetype: modify
+## replace: olcSuffix
+## olcSuffix: dc=mysite,dc=example,dc=com
+
+dn: olcDatabase=%%BLP_BACKEND%%,cn=config
+changetype: modify
+replace: olcSuffix
+olcSuffix: %%DOMAIN_COMPONENT%%
+
+# example)
+## dn: olcDatabase={1}mdb,cn=config
+## changetype: modify
+## replace: olcRootDN
+## olcRootDN: cn=Manager,dc=mysite,dc=example,dc=com
+
+dn: olcDatabase=%%BLP_BACKEND%%,cn=config
+changetype: modify
+replace: olcRootDN
+olcRootDN: %%CN_MANAGER%%
+
+# example) password is "password2"
+## dn: olcDatabase={1}mdb,cn=config
+## changetype: modify
+## add: olcRootPW
+## olcRootPW: {SSHA}k5xY8GJ3+v+JnakuAq6rU9/FSvL/6Ia+
+
+dn: olcDatabase=%%BLP_BACKEND%%,cn=config
+changetype: modify
+%%ROOT_PW_OPERATION%%: olcRootPW
+olcRootPW: %%BACKEND_PW%%
+

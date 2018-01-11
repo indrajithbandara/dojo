@@ -1,0 +1,37 @@
+# example)
+## dn: olcDatabase={2}mdb,cn=config
+## changetype: modify
+## replace: olcDbIndex
+## olcDbIndex: objectClass eq,pres
+## olcDbIndex: ou eq,pres,sub
+## olcDbIndex: cn eq,pres,sub
+## olcDbIndex: mail eq,pres,sub
+## olcDbIndex: surname eq,pres,sub
+## olcDbIndex: givenname eq,pres,sub
+## olcDbIndex: member pres,eq
+## olcDbIndex: uidNumber eq,pres
+## olcDbIndex: gidNumber eq,pres
+## olcDbIndex: loginShell eq,pres
+## olcDbIndex: uid eq,pres,sub
+## olcDbIndex: memberUid eq,pres,sub
+## olcDbIndex: nisMapName eq,pres,sub
+## olcDbIndex: nisMapEntry eq,pres,sub
+
+dn: olcDatabase=%%BLP_BACKEND%%,cn=config
+changetype: modify
+replace: olcDbIndex
+olcDbIndex: objectClass eq,pres
+olcDbIndex: ou eq,pres,sub
+olcDbIndex: cn eq,pres,sub
+olcDbIndex: mail eq,pres,sub
+olcDbIndex: surname eq,pres,sub
+olcDbIndex: givenname eq,pres,sub
+olcDbIndex: member pres,eq
+olcDbIndex: uidNumber eq,pres
+olcDbIndex: gidNumber eq,pres
+olcDbIndex: loginShell eq,pres
+olcDbIndex: uid eq,pres,sub
+olcDbIndex: memberUid eq,pres,sub
+olcDbIndex: nisMapName eq,pres,sub
+olcDbIndex: nisMapEntry eq,pres,sub
+
