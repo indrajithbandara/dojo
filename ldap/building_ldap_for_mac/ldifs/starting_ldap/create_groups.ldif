@@ -1,0 +1,17 @@
+# admin
+dn: cn=admin,ou=Groups,dc=mysite,dc=example,dc=com
+objectClass: posixGroup
+cn: develop
+gidNumber: 1100
+
+# develop
+dn: cn=develop,ou=Groups,dc=mysite,dc=example,dc=com
+objectClass: posixGroup
+cn: develop
+gidNumber: 1101
+
+# sales
+dn: cn=sales,ou=Groups,dc=mysite,dc=example,dc=com
+objectClass: posixGroup
+cn: sales
+gidNumber: 1102

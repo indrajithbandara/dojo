@@ -1,0 +1,179 @@
+# mac osx adjustments to group
+# TODO: Interim definishion (cn=admin,ou=groups,dc=mysite,dc=example,dc=com)
+dn: cn=admin,ou=groups,dc=mysite,dc=example,dc=com
+changetype: modify
+add: objectClass
+objectClass: apple-group
+objectClass: extensibleObject
+
+# TODO: Interim definishion (cn=admin,ou=groups,dc=mysite,dc=example,dc=com)
+dn: cn=admin,ou=groups,dc=mysite,dc=example,dc=com
+changetype: modify
+add: apple-group-realname
+apple-group-realname: Open Directory Administrators
+
+# TODO: Interim definishion (cn=admin,ou=groups,dc=mysite,dc=example,dc=com)
+dn: cn=admin,ou=groups,dc=mysite,dc=example,dc=com
+changetype: modify
+add: apple-generateduid
+apple-generateduid: 108af990-dc14-4bde-b5c0-bb5a1cfb3d74
+
+# TODO: Interim definishion (cn=admin,ou=groups,dc=mysite,dc=example,dc=com)
+dn: cn=admin,ou=groups,dc=mysite,dc=example,dc=com
+changetype: modify
+add: apple-group-memberguid
+apple-group-memberguid: 108af990-dc14-4bde-b5c0-bb5a1cfb3d74
+
+# mac osx adjustments to root user
+dn: uid=taro-suzuki,ou=users,dc=mysite,dc=example,dc=com
+changetype: modify
+add: objectClass
+objectClass: apple-user
+objectClass: extensibleObject
+objectClass: person
+objectClass: top
+
+dn: uid=taro-suzuki,ou=users,dc=mysite,dc=example,dc=com
+changetype: modify
+add: apple-generateduid
+apple-generateduid: 108af990-dc14-4bde-b5c0-bb5a1cfb3d74
+
+dn: uid=taro-suzuki,ou=users,dc=mysite,dc=example,dc=com
+changetype: modify
+add: authAuthority
+authAuthority: ;basic;
+
+# mac osx placeholders
+dn: ou=macosx,dc=mysite,dc=example,dc=com
+ou: macosx
+objectClass: organizationalUnit
+description: Holds metadata for OSX server
+
+dn: cn=accesscontrols,ou=macosx,dc=mysite,dc=example,dc=com
+cn: accesscontrols
+objectClass: container
+
+dn: cn=certificateauthorities,ou=macosx,dc=mysite,dc=example,dc=com
+cn: certificateauthorities
+objectClass: container
+
+dn: cn=computers,ou=macosx,dc=mysite,dc=example,dc=com
+cn: computers
+objectClass: container
+
+dn: cn=computer_groups,ou=macosx,dc=mysite,dc=example,dc=com
+cn: computer_groups
+objectClass: container
+
+dn: cn=computer_lists,ou=macosx,dc=mysite,dc=example,dc=com
+cn: computer_lists
+objectClass: container
+
+dn: cn=config,ou=macosx,dc=mysite,dc=example,dc=com
+cn: config
+objectClass: container
+
+dn: cn=locations,ou=macosx,dc=mysite,dc=example,dc=com
+cn: locations
+objectClass: container
+
+dn: cn=machines,ou=macosx,dc=mysite,dc=example,dc=com
+cn: machines
+objectClass: container
+
+dn: cn=neighborhoods,ou=macosx,dc=mysite,dc=example,dc=com
+cn: neighborhoods
+objectClass: container
+
+dn: cn=people,ou=macosx,dc=mysite,dc=example,dc=com
+cn: people
+objectClass: container
+
+dn: cn=presets_computer_lists,ou=macosx,dc=mysite,dc=example,dc=com
+cn: presets_computer_lists
+objectClass: container
+
+dn: cn=presets_groups,ou=macosx,dc=mysite,dc=example,dc=com
+cn: presets_groups
+objectClass: container
+
+dn: cn=preset_users,ou=macosx,dc=mysite,dc=example,dc=com
+cn: preset_users
+objectClass: container
+
+dn: cn=printers,ou=macosx,dc=mysite,dc=example,dc=com
+cn: printers
+objectClass: container
+
+dn: cn=augments,ou=macosx,dc=mysite,dc=example,dc=com
+cn: augments
+objectClass: container
+
+dn: cn=autoserversetup,ou=macosx,dc=mysite,dc=example,dc=com
+cn: autoserversetup
+objectClass: container
+
+dn: cn=filemakerservers,ou=macosx,dc=mysite,dc=example,dc=com
+cn: filemakerservers
+objectClass: container
+
+dn: cn=resources,ou=macosx,dc=mysite,dc=example,dc=com
+cn: resources
+objectClass: container
+
+dn: cn=places,ou=macosx,dc=mysite,dc=example,dc=com
+cn: places
+objectClass: container
+
+dn: cn=maps,ou=macosx,dc=mysite,dc=example,dc=com
+cn: mapsts_computers,ou=macosx,dc=mysite,dc=example,dc=com
+cn: presets_computers
+objectClass: container
+
+dn: cn=presets_computer_groups,ou=macosx,dc=mysite,dc=example,dc=com
+cn: presets_computer_groups
+objectClass: container
+
+dn: cn=automountMap,ou=macosx,dc=mysite,dc=example,dc=com
+cn: automountMap
+objectClass: container
+
+dn: ou=macosxodconfig,cn=config,ou=macosx,dc=mysite,dc=example,dc=com
+ou: macosxodconfig
+objectClass: organizationalUnit
+description:< file:///var/tmp/macodconfig_base64.xml
+
+dn: cn=presets_computers,ou=macosx,dc=mysite,dc=example,dc=com
+cn: presets_computers
+objectClass: container
+
+dn: cn=CIFSServer,cn=config,ou=macosx,dc=mysite,dc=example,dc=com
+cn: CIFSServer
+objectClass: apple-configuration
+objectClass: top
+
+dn: cn=mcx_cache,cn=config,ou=macosx,dc=mysite,dc=example,dc=com
+cn: mcx_cache
+objectClass: apple-configuration
+objectClass: top
+
+dn: cn=ldapreplicas,cn=config,ou=macosx,dc=mysite,dc=example,dc=com
+cn: ldapreplicas
+objectClass: apple-configuration
+objectClass: top
+
+dn: cn=passwordserver,cn=config,ou=macosx,dc=mysite,dc=example,dc=com
+cn: passwordserver
+objectClass: apple-configuration
+objectClass: top
+
+dn: cn=macosxodpolicy,cn=config,ou=macosx,dc=mysite,dc=example,dc=com
+cn: macosxodpolicy
+objectClass: apple-configuration
+objectClass: top
+
+dn: cn=CollabServices,cn=config,ou=macosx,dc=mysite,dc=example,dc=com
+cn: CollabServices
+objectClass: apple-configuration
+objectClass: top
+

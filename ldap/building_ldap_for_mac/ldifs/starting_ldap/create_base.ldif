@@ -1,0 +1,23 @@
+# Organization
+dn: dc=mysite,dc=example,dc=com
+objectClass: dcObject
+objectClass: organization
+dc: mysite
+o: Example Inc.
+
+# Manager
+dn: cn=Manager,dc=mysite,dc=example,dc=com
+objectClass: organizationalRole
+cn: Manager
+description: Cirectory Manager
+
+# users
+dn: ou=Users,dc=mysite,dc=example,dc=com
+objectClass: organizationalUnit
+ou: Users
+
+# Groups
+dn: ou=Groups,dc=mysite,dc=example,dc=com
+objectClass: organizationalUnit
+ou: Groups
+
