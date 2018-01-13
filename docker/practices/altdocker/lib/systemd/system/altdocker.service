@@ -1,0 +1,18 @@
+[Unit]
+Description=Alt Docker Application Container Engine
+Documentation=https://docs.docker.com
+After=network.target altdocker.socket
+Requires=altdocker.socket
+
+[Service]
+Type=simple
+EnvironmentFile=-/etc/default/altdocker
+ExecStart=/usr/local/bin/altdocker/altdocker-daemon
+MountFlags=slave
+LimitNOFILE=1048576
+LimitNPROC=1048576
+LimitCORE=infinity
+
+[Install]
+WantedBy=multi-user.target
+

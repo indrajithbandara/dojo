@@ -1,0 +1,23 @@
+# Alternative Docker Upstart and SysVinit configuration file
+
+# Socket path for alternative docker
+DOCKER_SOCKET="unix:///var/run/altdocker.sock"
+
+# File which process ID of daemon is stored.
+DOCKER_PID_FILE="/var/run/altdocker.pid"
+
+# Location where docker state is stored.
+DOCKER_EXEC_ROOT="/var/run/altdocker"
+
+# Location where docker images are stored.
+DOCKER_GRAPH="/var/lib/altdocker"
+
+# Bridge interface name.
+DOCKER_BRIDGE="altdocker0"
+
+# Bridge interface ip address
+DOCKER_BRIDGE_IP="192.168.255.1/24"
+
+# Storage driver type.
+DOCKER_STORAGE_DRIVER="devicemapper"
+

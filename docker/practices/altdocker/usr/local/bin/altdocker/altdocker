@@ -1,0 +1,4 @@
+#!/bin/bash
+[ -r /etc/default/altdocker ] && . /etc/default/altdocker
+docker -H ${DOCKER_SOCKET:-unix:///var/run/altdocker.sock} $@
+

@@ -1,0 +1,14 @@
+nodeapp:
+  build: "./app-server"
+  container_name: "nodeapp"
+  working_dir: "/usr/src/app"
+  ports:
+   - "10080:10080"
+  volumes:
+   - "$PWD/app-server/src:/usr/src/app"
+  links:
+   - "noderedis"
+noderedis:
+  image: "redis:3"
+  container_name: "noderedis"
+

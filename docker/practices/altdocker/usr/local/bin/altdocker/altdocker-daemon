@@ -1,0 +1,44 @@
+#!/bin/bash
+
+if [ "$(id -u)" != "0" ]
+then
+    echo "$0 must be run as root." >&2
+    exit 1
+fi
+
+if [ ! -r /etc/default/altdocker ]
+then
+    echo "Failed to read file /etc/default/altdocker" >&2
+    exit 1
+fi
+. /etc/default/altdocker
+
+function create_docker_bridge() {
+    if ! ip link show $DOCKER_BRIDGE > /dev/null 2>&1
+    then
+        brctl addbr $DOCKER_BRIDGE
+        ip addr add $DOCKER_BRIDGE_IP
+    fi
+    sleep 0.5
+}
+
+function inactivate_docker_bridge() {
+    if ip link show $DOCKER_BRIDGE > /dev/null 2>&1
+    then
+        ip link set dev $DOCKER_BRIDGE down
+    fi
+}
+
+trap inactivate_docker_bridge EXIT
+
+create_docker_bridge
+/usr/bin/docker daemon -H $DOCKER_SOCKET -b $DOCKER_BRIDGE -p $DOCKER_PID_FILE --exec-root $DOCKER_EXEC_ROOT --graph $DOCKER_GRAPH --storage-driver $DOCKER_STORAGE_DRIVER
+EXIT_STATUS=$?
+
+if [ $EXIT_STATUS -ne 0 ]
+then
+    echo "Some error occured when running altdocker daemon" >&2
+fi
+
+exit $EXIT_STATUS
+
