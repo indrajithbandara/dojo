@@ -1,0 +1,21 @@
+{
+  "name": "nodeprj",
+  "version": "1.0.0",
+  "description": "The program for dividing numbers.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "ava -v"
+  },
+  "keywords": [
+    "divided"
+  ],
+  "author": "Tsutomu Nakamura",
+  "license": "MIT",
+  "devDependencies": {
+    "ava": "^0.14.0",
+    "sinon": "^1.17.3"
+  }
+}
